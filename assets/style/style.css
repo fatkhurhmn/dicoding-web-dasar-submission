@@ -58,46 +58,6 @@ nav {
     display: none;
 }
 
-@media screen and (max-width:600px) {
-    .nav-right a {
-        display: none;
-    }
-
-    .nav-right a.nav-menu {
-        display: block;
-    }
-}
-
-@media screen and (max-width:600px) {
-
-    .nav-right.open .nav-menu {
-        text-align: end;
-    }
-
-    .nav-right.open {
-        display: block;
-        width: 100%;
-    }
-
-    .nav-right.open .nav-menu {
-        right: 0;
-        top: 0;
-    }
-
-    .nav-right.open a {
-        display: block;
-    }
-
-    .nav.open {
-        height: 100%;
-    }
-
-    .nav-left.open {
-        display: none;
-    }
-}
-
-
 main {
     padding: 20px 5% 20px 5%;
     overflow: auto;
@@ -106,28 +66,26 @@ main {
 main .content {
     width: 75%;
     float: left;
-    padding: 10px 40px;
-    margin: 0;
+    padding: 0px 20px;
 }
 
 .card {
-    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
 
 .content article {
     scroll-margin-top: 100px;
+    padding: 30px 40px;
+    margin-top: 20px;
 }
 
-.content article {
-    margin-top: 40px;
-}
-
-.content article h3 {
-    border-left: 5px solid #fb7d00;
+.content article h2 {
+    border-left: 6px solid #fb8500;
     padding: 0px 10px;
     margin: 10px 0px;
     flex-grow: 1;
+    color: #023047;
 }
 
 .content article:not(:last-child) img {
@@ -142,6 +100,7 @@ main .content {
 .description-section h4 {
     margin-top: 10px;
     margin-bottom: 5px;
+    color: #023047;
 }
 
 .description {
@@ -179,26 +138,62 @@ main .content {
 }
 
 #skills .description-section {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 main aside {
     float: right;
     width: 25%;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0px 20px;
+}
+
+aside article {
+    justify-content: center;
+    padding: 0 30px 40px 30px;
+    margin-top: 20px;
+}
+
+#container-profile {
+    background-color: #023047;
+    width: 90%;
+    margin: 0px auto;
+    border-radius: 0px 0px 50% 50%;
+}
+
+aside #container-profile+p {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+aside header>p {
+    line-height: 1.3em;
+    text-align: center;
 }
 
 aside img {
-    width: 150px;
-    height: 150px;
+    width: 85%;
     align-content: center;
     display: block;
     margin: auto;
-    border-radius: 75px;
+    padding: 10px;
+    border-radius: 50%;
 }
 
-@media screen and (max-width:600px) {
+blockquote {
+    padding: 10px 20px;
+    border-radius: 0px 20px;
+    background-color: #e7f4ff;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+blockquote p {
+    font-size: 14px;
+    text-align: center;
+    font-style: italic;
+}
+
+@media screen and (max-width:1000px) {
 
     main .content,
     main aside {
@@ -207,5 +202,58 @@ aside img {
 
     .skills li {
         width: 100%;
+    }
+
+    #container-profile {
+        width: 250px;
+    }
+
+    blockquote {
+        margin: 0 auto;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .nav-right a {
+        display: none;
+    }
+
+    .nav-right a.nav-menu {
+        display: block;
+    }
+
+    .content article:not(:last-child) img {
+        float: none;
+    }
+
+    .nav-right.open .nav-menu {
+        text-align: end;
+    }
+
+    .nav-right.open {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-right.open .nav-menu {
+        right: 0;
+        top: 0;
+    }
+
+    .nav-right.open a {
+        display: block;
+    }
+
+    .nav.open {
+        height: 100%;
+    }
+
+    .nav-left.open {
+        display: none;
+    }
+
+    .content article:not(:last-child) img {
+        float: none;
     }
 }
